@@ -1,4 +1,9 @@
 .App {
   text-align: center;
 }
-
+.turnRed{
+  color: red;
+}
+.turnBlue{
+  color: blue;
+}

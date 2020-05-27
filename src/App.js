@@ -44,6 +44,11 @@ class App extends Component {
 
   render() {
     let personDiv = null;
+    const classes = [];
+    if (this.state.persons.length === 2)
+      classes.push('turnRed');
+    if (this.state.persons.length === 1)
+      classes.push('turnBlue');
     if (this.state.doShow) {
       personDiv = (
         <div>
@@ -73,8 +78,8 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <h1>Hello My First React App</h1>
-        <button onClick={this.switchNameHandler}>Click It</button>
+        <h1 className={classes.join(' ')}>Hello My First React App</h1>
+        <button onClick={this.switchNameHandler}>Show it</button>
         {personDiv}
       </div>
     );
