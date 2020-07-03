@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import styleClasses from './App.css';
 import Person from './Person/Person';
 //import person from './Person/Person';
 
@@ -46,9 +46,9 @@ class App extends Component {
     let personDiv = null;
     const classes = [];
     if (this.state.persons.length === 2)
-      classes.push('turnRed');
+      classes.push(styleClasses.turnRed);
     if (this.state.persons.length === 1)
-      classes.push('turnBlue');
+      classes.push(styleClasses.turnBlue);
     if (this.state.doShow) {
       personDiv = (
         <div>
@@ -60,24 +60,10 @@ class App extends Component {
               age={person.age} />
           })}
         </div>
-        // <Person name={this.state.persons[0].name}
-        //   age={this.state.persons[0].age}
-        //   click={this.switchNameHandler}
-        //   changedName={this.nameChangeHandler} />
-
-        // <Person name={this.state.persons[1].name}
-        //   age={this.state.persons[1].age}
-        //   click={this.switchNameHandler}
-        //   changedName={this.nameChangeHandler} />
-
-        // <Person name={this.state.persons[2].name}
-        //   age={this.state.persons[2].age}
-        //   click={this.switchNameHandler}
-        //   changedName={this.nameChangeHandler} />
       )
     }
     return (
-      <div className="App">
+      <div className={styleClasses.App}>
         <h1 className={classes.join(' ')}>Hello My First React App</h1>
         <button onClick={this.switchNameHandler}>Show it</button>
         {personDiv}
