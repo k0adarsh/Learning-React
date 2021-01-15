@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styleClasses from './App.css';
-import Person from './Person/Person';
-//import person from './Person/Person';
+import Person from './Persons/Person/Person';
+// import person from './Person/Person';
 
 class App extends Component {
   state = {
@@ -33,13 +33,6 @@ class App extends Component {
     this.setState({
       persons: persons
     })
-    // this.setState({
-    //   persons: [
-    //     { name: event.target.value, age: 22 },
-    //     { name: event.target.value, age: 24 },
-    //     { name: event.target.value, age: 25 }
-    //   ]
-    // })
   };
 
   render() {
@@ -71,45 +64,5 @@ class App extends Component {
     );
   }
 }
-
-// const app = (props) => {
-//   const [personState, setPersonState] = useState({
-//     persons: [
-//       { name: "Adarsh", age: 22 },
-//       { name: "Priyanka", age: 24 }
-//     ]
-//   });
-//   const switchNameHandler = () => {
-//     setPersonState({
-//       persons: [
-//         { name: "Adarsh Kunwar", age: 24 },
-//         { name: "Priyanka Singh", age: 32 }
-//       ]
-//     });
-//     //console.log('I am clicked');
-//   };
-//   const nameChangeHanlder = (event) => {
-//     setPersonState({
-//       persons: [
-//         { name: event.target.value, age: 24 },
-//         { name: event.target.value, age: 24 }
-//       ]
-//     });
-//   };
-//   return (
-//     <div className="App">
-//       <h1>Hello My First React App</h1>
-//       <button onClick={switchNameHandler}>Click It</button>
-//       <Person name={personState.persons[0].name}
-//         age={personState.persons[0].age}
-//         click={switchNameHandler}
-//         changedName={nameChangeHanlder} />
-//       <Person name={personState.persons[1].name}
-//         age={personState.persons[1].age} />
-//     </div>
-//     //React.createElement('div', { className: 'App' }, React.createElement('h1', null, "It is transformed"))
-//   );
-// }
-
 
 export default App;
