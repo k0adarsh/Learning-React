@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styleClasses from './App.css';
-import Person from './Persons/Person/Person';
+import Person from '../components/Persons/Person/Person';
 // import person from './Person/Person';
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
     doShow: false
   };
 
-  switchNameHandler = () => {
+  showHideHandler = () => {
     //console.log('I am changing state on click');
     const val = this.state.doShow;
     this.setState({
